@@ -1,10 +1,12 @@
 <?php
+
 // require __DIR__ . "/../../bootstrap.php";
+
 namespace Controllers\Admin;
 
-use Models\Items;
 use Models\Categories;
-use \Traits\AuthCheck;
+use Models\Items;
+use Traits\AuthCheck;
 
 class AdminItemController
 {
@@ -23,7 +25,7 @@ class AdminItemController
         $v->rule('lengthMax', 'description', 65535);
         $v->rule('numeric', ['price', 'category']);
         $v->rule('max', 'price', 9999.99);
-        if(!$v->validate()) {
+        if (!$v->validate()) {
             http_response_code(400);
             echo json_encode(['error' => true, 'errors' => $v->errors()]);
             die();
@@ -48,7 +50,7 @@ class AdminItemController
     public function removeItem()
     {
         self::key();
-        
+
         $v = new \Valitron\Validator($_POST);
         $v->rule('required', 'id');
         if (!$v->validate()) {

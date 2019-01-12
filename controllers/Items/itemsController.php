@@ -4,15 +4,15 @@
 
 namespace Controllers\Items;
 
-use \Models\Categories;
+use Models\Categories;
 
-class ItemsController {
-
+class itemsController
+{
     public function getByCat()
     {
         $v = new \Valitron\Validator($_POST);
         $v->rule('required', 'category');
-        if(!$v->validate()) {
+        if (!$v->validate()) {
             http_response_code(400);
             echo json_encode(['error' => true, 'errors' => $v->errors()]);
             die();

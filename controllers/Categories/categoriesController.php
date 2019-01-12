@@ -1,10 +1,12 @@
 <?php
+
 // require __DIR__ . "/../../bootstrap.php";
+
 namespace Controllers\Categories;
 
-use \Models\Categories;
+use Models\Categories;
 
-class CategoriesController
+class categoriesController
 {
     public function getAll()
     {

@@ -1,10 +1,12 @@
 <?php
+
 // require __DIR__ . "/../../bootstrap.php";
+
 namespace Controllers\Auth;
 
-use \Models\Users;
+use Models\Users;
 
-class AuthController
+class authController
 {
     public function login()
     {
@@ -42,7 +44,7 @@ class AuthController
         $v->rule('required', ['name', 'email', 'password']);
         $v->rule('lengthMax', ['name', 'email'], 255);
         $v->rule('email', 'email');
-        if(!$v->validate()) {
+        if (!$v->validate()) {
             http_response_code(400);
             echo json_encode(['error' => true, 'errors' => $v->errors()]);
             die();
