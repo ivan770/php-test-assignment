@@ -24,3 +24,5 @@
 1. Eloquent ORM - работа с БД.
 2. Valitron - валидация входящих данных.
 3. AltoRouter - роутинг.
+---
+В качестве Document Root использовать директорию `public`
