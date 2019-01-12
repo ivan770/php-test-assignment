@@ -1,0 +1,17 @@
+{
+    "require": {
+        "illuminate/database": "^5.7",
+        "vlucas/valitron": "^1.4",
+        "altorouter/altorouter": "^1.2"
+    },
+    "autoload": {
+        "classmap": [
+            "models",
+            "traits",
+            "controllers"
+        ]
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
