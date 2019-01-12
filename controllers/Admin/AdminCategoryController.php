@@ -1,9 +1,11 @@
 <?php
+
 // require __DIR__ . "/../../bootstrap.php";
+
 namespace Controllers\Admin;
 
-use \Models\Categories;
-use \Traits\AuthCheck;
+use Models\Categories;
+use Traits\AuthCheck;
 
 class AdminCategoryController
 {

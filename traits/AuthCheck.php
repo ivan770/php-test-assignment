@@ -1,7 +1,8 @@
 <?php
+
 namespace Traits;
 
-use \Models\Users;
+use Models\Users;
 
 trait AuthCheck
 {
